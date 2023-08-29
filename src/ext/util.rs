@@ -17,6 +17,8 @@ pub fn os_arch() -> Result<(&'static str, &'static str)> {
         "x86_64"
     } else if cfg!(target_arch = "aarch64") {
         "aarch64"
+    } else if cfg!(target_arch = "riscv64") {
+        "riscv64"
     } else {
         bail!("unsupported target architecture")
     };
